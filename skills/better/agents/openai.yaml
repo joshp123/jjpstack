@@ -1,0 +1,4 @@
+interface:
+  display_name: "Better"
+  short_description: "Make a task deeper, not bigger"
+  default_prompt: "Use $better on this."

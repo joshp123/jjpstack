@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompting models"
+  short_description: "Write instructions current models read well"
+  default_prompt: "Use $prompting-models to write this prompt."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Engineering"
+  short_description: "Josh's engineering principles; run after Josh invokes it"
+policy:
+  allow_implicit_invocation: false

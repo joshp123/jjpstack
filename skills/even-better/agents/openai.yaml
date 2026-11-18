@@ -1,0 +1,4 @@
+interface:
+  display_name: "Even better"
+  short_description: "The better skill, pushed harder"
+  default_prompt: "Use $even-better on this."

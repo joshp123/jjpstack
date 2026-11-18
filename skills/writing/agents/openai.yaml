@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing"
+  short_description: "Write plain prose to Gowers' The Complete Plain Words"
+  default_prompt: "Use $writing for this."

@@ -1,0 +1,30 @@
+{
+  "env": {
+    "CLAUDE_CODE_BASALT_COVE": "1",
+    "CLAUDE_CODE_SILENT_TURN_REMINDER_TEXT": "You have worked for a while without writing, and that is right: Josh reads only your last message. Write nothing now unless your plan has changed, and then only one short line."
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          { "type": "command", "command": "python3 ~/.claude/hooks/after_compaction.py" }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "python3 -I ~/.claude/hooks/cut_output_reminder.py" }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read(~/.local/state/claude-compaction-log/**)",
+      "Edit(~/.local/state/claude-compaction-log/**)"
+    ]
+  }
+}

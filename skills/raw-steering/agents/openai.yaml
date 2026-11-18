@@ -1,0 +1,4 @@
+interface:
+  display_name: "Raw steering"
+  short_description: "Read what Josh actually said"
+  default_prompt: "Use $raw-steering to read what Josh said about this."

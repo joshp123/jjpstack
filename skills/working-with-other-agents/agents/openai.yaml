@@ -1,0 +1,4 @@
+interface:
+  display_name: "Working with other agents"
+  short_description: "Brief, delegate and review without losing intent"
+  default_prompt: "Use $working-with-other-agents to brief another agent on this."
