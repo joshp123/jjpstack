@@ -36,4 +36,4 @@ The skills are written for me and name me; change that to you. This is a snapsho
 
 ## Talk to me
 
-If you like this, talk to me on X, [@jjpcodes](https://x.com/jjpcodes). If you don't like it, don't yell at me. If you have a good idea to make it better, tell me and I might think about it.
+If you like this, talk to me on X, [@jjpcodes](https://x.com/jjpcodes). If you don't like it, yell at me. If you have a good idea to make it better, don't yell: talk to me, and I might think about it.
