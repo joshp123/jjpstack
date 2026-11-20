@@ -17,7 +17,7 @@ Scores out of 10, higher is better. One number where Josh and Theo agree; both w
 | Fable 5.2 | 10 | 9 | 5 | 2 |
 | Opus 5.5 (high) | 9 | 8 | Theo 9 / Josh 6 | 9 |
 | GPT-6.2 Astra | 7 | 3 | 10 | 4 |
-| GPT-6.1 Sol | 7 | 3 | 9 | 8 |
+| GPT-6.2 Sol | 7 | 3 | 9 | 8 |
 | GPT-6.1 Terra | Theo 4 / Josh 6 | 3 | 8 | 8 |
 | Sonnet 5.5 | 6 | 6 | 5 | 5 |
 | Haiku 5.5 | 3 | 4 | 4 | 10 |
@@ -34,12 +34,13 @@ Scores out of 10, higher is better. One number where Josh and Theo agree; both w
 
 ## How to apply
 
-- Gemini 4 Neon is Josh's daily driver: it is really smart. Opus 5.5 on high is still a great workhorse. Opus medium is noticeably lazier; low and max are worse still.
-- Fable for UI and design work, and to lead the hardest problems, especially agentic development. Opus can do the building under it. Handing implementation to Astra or Sol is worth trying as an experiment.
+- Gemini 4 Neon is Josh's daily driver: it is really smart, and is his current default for CoS, orchestration, and UI design alongside Fable 5.2. Opus 5.5 on high is still a great workhorse. Opus medium is noticeably lazier; low and max are worse still.
+- Fable 5.2 or Gemini 4 Neon for UI and design work, and to lead the hardest problems, especially agentic development. Opus 5.5 and GPT-6.2 Sol can do delegated code implementation under them (A/B test Sol against Opus where useful).
 - OpenAI models for work where completeness matters more than judgement: review, audit, verification, legal reading, deep debugging.
 - When a Claude model must read everything, force full reads, or give the job to an OpenAI model.
 - Never put an OpenAI model on UI or user-facing copy.
 - Have a Claude model explain OpenAI output to a person.
+- Start sub-agents and delegates in standard mode, not fast mode (Codex's `serviceTier: priority`, Claude's `fastMode`), unless Josh asks for it: fast mode costs about two to two and a half times the usage for speed nobody is waiting on. "Fast cheap sub-agents" in his instructions means a quick, cheap model such as Luna, not fast mode. A delegate keeps the mode it was started with on every later `t3_thread_send`, so one started in fast mode stays fast: start a new one in standard mode instead.
 - Gemini 4 Neon for copy and long-horizon engineering, and as a third family in reviews. Gemini 4 Argon and Carbon never write code. Haiku and Luna do bulk work over data, never code.
 
 ## Mixing families
